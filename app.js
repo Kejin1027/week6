@@ -30,6 +30,7 @@ app.get('/listtasks',function(req,res){
     Task.find({},function(err, docs){
         res.render('listtasks.html',{db: docs});
     })
+
 });
 
 app.get('/addtask',function(req,res){
@@ -53,6 +54,13 @@ app.get('/update',function(req,res){
 app.get('/delete',function(req,res){
     res.render('delete.html');
 });
+
+app.get('/sort',function(req,res){
+    let sortBy = {taskName:-1};
+    Task.where('taskName').sort(sortBy).limit(3).exec(function(err,data){
+        res.render('listtasks.html',{db: data });
+    });
+})
 
 
 app.post('/data',function(req,res){
