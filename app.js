@@ -115,10 +115,10 @@ app.post('/insertdeveloper',function(req,res){
         },
         level: detail.level,
         address: {
-            State: detail.State,
-            Suburb: detail.Suburb,
-            Street: detail.Street,
-            Unit: detail.Unit
+            State: detail.state,
+            Suburb: detail.suburb,
+            Street: detail.street,
+            Unit: detail.unit
         }
     });
     developer.save(function(err){

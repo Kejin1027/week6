@@ -25,7 +25,7 @@ let developerSchema = mongoose.Schema({
         Suburb: String,
         Street: String,
         Unit: Number
-    }
+    },
 })
 
 let developerModel = mongoose.model('developerSol',developerSchema);
