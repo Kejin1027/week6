@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <h2>
+        <a href="/">Home</a>
+        <a href="/addtask">Add task</a>
+        <a href="/listtasks">List tasks</a>
+        <a href="/insertdeveloper">Add developer</a>
+        <a href="/listdevelopers">List Developers</a>
+        <a href="/update">Update</a>
+        <a href="/delete">Delete</a>
+    </h2>
+    <body>
+        <h2>Delete one:</h2>
+        <form action="/deleteTask" method = "POST">
+        Task ID <input type="text" name = "id">
+        <button>Submit</button>
+        </form>
+        <h2>Delete all:</h2>
+        <form action="/deleteAll" method= "POST">
+        <button>Delete all</button>
+        </form>
+    </body>
+</html>
